@@ -1,0 +1,1 @@
+# Flutter DDD Skeleton Monorepo
