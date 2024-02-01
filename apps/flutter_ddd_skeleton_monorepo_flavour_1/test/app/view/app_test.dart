@@ -1,6 +1,11 @@
+// Package imports:
+
+// Package imports:
+import 'package:flutter_test/flutter_test.dart';
+
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/counter/counter.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('App', () {

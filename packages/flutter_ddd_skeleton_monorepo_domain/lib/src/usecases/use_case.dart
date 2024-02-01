@@ -1,3 +1,4 @@
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_domain/flutter_ddd_skeleton_monorepo_domain.dart';
 
 abstract class UseCase<Type, Params> {

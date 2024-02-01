@@ -1,10 +1,16 @@
-import 'package:bloc_test/bloc_test.dart';
+// Flutter imports:
+
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_ddd_skeleton_monorepo_flavour_1/counter/counter.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
+// Project imports:
+import 'package:flutter_ddd_skeleton_monorepo_flavour_1/counter/counter.dart';
 import '../../helpers/helpers.dart';
 
 class MockCounterCubit extends MockCubit<int> implements CounterCubit {}

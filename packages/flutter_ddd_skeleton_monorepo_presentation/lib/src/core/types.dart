@@ -1,3 +1,4 @@
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_presentation/flutter_ddd_skeleton_monorepo_presentation.dart';
 
 typedef CreateBloc<T extends BlocBase<dynamic>> = T Function(
