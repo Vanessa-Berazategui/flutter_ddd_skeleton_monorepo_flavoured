@@ -1,8 +1,8 @@
-// Flutter imports:
-import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
-
 // Package imports:
 import 'package:flutter_test/flutter_test.dart';
+
+// Project imports:
+import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
 
 // Project imports:
 

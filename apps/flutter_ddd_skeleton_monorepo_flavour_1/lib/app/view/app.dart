@@ -1,5 +1,6 @@
 // Flutter imports:
 
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
 
 class App extends StatelessWidget {
@@ -7,17 +8,14 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: blocsProvider,
-      child: MaterialApp.router(
-        routerConfig: router,
-        theme: theme,
-        darkTheme: darkTheme,
-        themeMode: ThemeMode.light,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: AppLocalizations.supportedLocales,
-        debugShowCheckedModeBanner: false,
-      ),
+    return MaterialApp.router(
+      routerConfig: appRouter,
+      theme: theme,
+      darkTheme: darkTheme,
+      themeMode: ThemeMode.light,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

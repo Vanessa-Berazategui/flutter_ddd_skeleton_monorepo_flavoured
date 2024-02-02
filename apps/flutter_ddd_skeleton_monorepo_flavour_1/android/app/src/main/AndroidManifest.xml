@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.verygoodcore.flutter_ddd_skeleton_monorepo_flavour_1">
+    package="com.vberazateguisilva.flutter_ddd_skeleton_monorepo_flavour_1">
    <application
         android:label="${appName}"
         android:name="${applicationName}"

@@ -8,19 +8,26 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+
+// Package imports:
 import 'package:device_info_plus/device_info_plus.dart' as _i7;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i8;
+import 'package:get_it/get_it.dart' as _i1;
+import 'package:injectable/injectable.dart' as _i2;
+
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart' as _i3;
-import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/dependencies/app_packages_module.dart'
+
+import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/dependencies/app_blocs_module.dart'
     as _i9;
+import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/dependencies/app_packages_module.dart'
+    as _i10;
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/environment/app_environment_development.dart'
     as _i5;
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/environment/app_environment_production.dart'
     as _i6;
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/environment/app_environment_staging.dart'
     as _i4;
-import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i8;
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
 
 const String _stg = 'stg';
 const String _dev = 'dev';
@@ -37,6 +44,7 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
+    final appBlocsModule = _$AppBlocsModule();
     final appPackagesModule = _$AppPackagesModule();
     gh.lazySingleton<_i3.AppEnvironment>(
       () => _i4.AppEnvironmentStaging(),
@@ -50,6 +58,7 @@ extension GetItInjectableX on _i1.GetIt {
       () => _i6.AppEnvironmentProduction(),
       registerFor: {_prod},
     );
+    gh.factory<_i3.CounterBloc>(() => appBlocsModule.counterBloc());
     gh.lazySingleton<_i7.DeviceInfoPlugin>(
         () => appPackagesModule.deviceInfoPlugin());
     gh.lazySingleton<_i8.FlutterSecureStorage>(
@@ -58,4 +67,6 @@ extension GetItInjectableX on _i1.GetIt {
   }
 }
 
-class _$AppPackagesModule extends _i9.AppPackagesModule {}
+class _$AppBlocsModule extends _i9.AppBlocsModule {}
+
+class _$AppPackagesModule extends _i10.AppPackagesModule {}

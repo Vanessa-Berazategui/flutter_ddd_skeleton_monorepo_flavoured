@@ -1,4 +1,4 @@
-// Dart imports:
+// Package imports:
 import 'package:injectable/injectable.dart';
 
 @module
