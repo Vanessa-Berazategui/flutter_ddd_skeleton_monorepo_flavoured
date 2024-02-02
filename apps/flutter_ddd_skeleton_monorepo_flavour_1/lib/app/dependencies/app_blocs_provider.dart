@@ -1,9 +1,9 @@
-import 'package:self_checkout_cvc/app/dependencies/dependencies.dart';
-import 'package:self_checkout_presentation/self_checkout_presentation.dart';
+// Package imports:
+
+import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
+import 'package:flutter_ddd_skeleton_monorepo_presentation/flutter_ddd_skeleton_monorepo_presentation.dart';
 
 /// Global blocs provider
-final blocsProvider = [
-  BlocProvider<SessionBloc>(create: (context) => getIt()),
-  BlocProvider<LightsBloc>(create: (context) => getIt()),
-  BlocProvider<SupervisorBloc>(create: (context) => getIt()),
+final List<BlocProvider> blocsProvider = [
+  //BlocProvider<SessionBloc>(create: (context) => getIt()),
 ];

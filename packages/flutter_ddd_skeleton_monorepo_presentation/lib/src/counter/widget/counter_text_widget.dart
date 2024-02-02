@@ -1,6 +1,6 @@
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_presentation/flutter_ddd_skeleton_monorepo_presentation.dart';
 import 'package:flutter_ddd_skeleton_monorepo_presentation/src/core/core.dart';
-import 'package:flutter_ddd_skeleton_monorepo_presentation/src/counter/counter.dart';
 
 class CounterTextWidget extends StatelessWidget {
   const CounterTextWidget({super.key});

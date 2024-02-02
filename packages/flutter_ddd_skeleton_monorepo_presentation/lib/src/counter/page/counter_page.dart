@@ -1,5 +1,5 @@
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_presentation/src/core/core.dart';
-import 'package:flutter_ddd_skeleton_monorepo_presentation/src/counter/bloc/counter_bloc.dart';
 import 'package:flutter_ddd_skeleton_monorepo_presentation/src/flutter_ddd_skeleton_monorepo_presentation.dart';
 
 abstract class CounterPage<View extends Widget> extends GoRoute {

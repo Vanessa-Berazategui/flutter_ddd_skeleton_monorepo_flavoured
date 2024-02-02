@@ -42,3 +42,29 @@ fix: ## Fixing the code
 sort: ## Sorting dependencies
 	@echo "╠ Sorting dependencies..."
 	fvm flutter pub run import_sorter:main
+
+build_apk: ## Build mobile application for mode
+	@echo "╠ Building mobile application for $(mode)..."
+	fvm flutter build apk --$(mode) -t lib/main_production.dart --obfuscate --split-debug-info=./obfuscatation/debug
+
+build_aab: ## Build mobile application for mode
+	@echo "╠ Building mobile application for $(mode)..."
+	fvm flutter build appbundle --$(mode) -t lib/main_production.dart --obfuscate --split-debug-info=./obfuscatation/debug
+
+build_ipa: ## Build mobile application for mode
+	@echo "╠ Building iOS mobile application for $(mode).."
+	fvm flutter build ipa --$(mode) --export-options-plist=ios/ExportOptionsAppStore.plist -t lib/main_production.dart 
+
+build_web: ## Build web application for mode
+	@echo "╠ Building web application for $(mode)..."
+	fvm flutter build web -t lib/main_production.dart --web-renderer canvaskit --dart-define=FLUTTER_WEB_USE_SKIA=true --dart-define=FLUTTER_WEB_CANVASKIT_URL=canvaskit/ --$(mode)
+
+.PHONY: icon
+icon: ## Generates launcher icon
+	@echo "╠ Making launcher icon"
+	fvm dart run flutter_launcher_icons
+
+.PHONY: native-splash
+native-splash: ## Generates native splash
+	@echo "╠ Making native splash"
+	fvm dart run flutter_native_splash:create
