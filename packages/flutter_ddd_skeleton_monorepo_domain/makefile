@@ -42,3 +42,8 @@ fix: ## Fixing the code
 sort: ## Sorting dependencies
 	@echo "╠ Sorting dependencies..."
 	fvm flutter pub run import_sorter:main
+
+.PHONY: rename
+rename:
+	@echo "╠ Renaming the app to $(full-name)"
+	fvm flutter pub run change_app_package_name:main $(full-name)
