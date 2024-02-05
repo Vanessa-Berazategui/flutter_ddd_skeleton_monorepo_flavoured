@@ -39,6 +39,42 @@
                 "--target",
                 "lib/main_production.dart"
             ]
+        },
+        {
+            "name": "Launch Flavour 2 development",
+            "request": "launch",
+            "type": "dart",
+            "program": "apps/flutter_ddd_skeleton_monorepo_flavour_2/lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "development",
+                "--target",
+                "lib/main_development.dart"
+            ]
+        },
+        {
+            "name": "Launch Favlour 2 staging",
+            "request": "launch",
+            "type": "dart",
+            "program": "apps/flutter_ddd_skeleton_monorepo_flavour_2/lib/main_staging.dart",
+            "args": [
+                "--flavor",
+                "staging",
+                "--target",
+                "lib/main_staging.dart"
+            ]
+        },
+        {
+            "name": "Launch Falvour 2 production",
+            "request": "launch",
+            "type": "dart",
+            "program": "apps/flutter_ddd_skeleton_monorepo_flavour_2/lib/main_production.dart",
+            "args": [
+                "--flavor",
+                "production",
+                "--target",
+                "lib/main_production.dart"
+            ]
         }
     ]
 }
