@@ -40,7 +40,7 @@ _\*Flutter Ddd Skeleton Monorepo Flavour 1 works on iOS, Android, Web, and Windo
 To run all unit and widget tests use the following command:
 
 ```sh
-$ flutter test --coverage --test-randomize-ordering-seed random
+flutter test --coverage --test-randomize-ordering-seed random
 ```
 
 To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
@@ -61,7 +61,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 
 ### Adding Strings
 
-1. To add a new localizable string, open the `app_en.arb` file at `lib/l10n/arb/app_en.arb`.
+1. To add a new localizable string, open the `app_en.arb` file at `l10n/arb/app_en.arb`.
 
 ```arb
 {
@@ -109,17 +109,17 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     ...
 
     <key>CFBundleLocalizations</key>
-	<array>
-		<string>en</string>
-		<string>es</string>
-	</array>
+ <array>
+  <string>en</string>
+  <string>es</string>
+ </array>
 
     ...
 ```
 
 ### Adding Translations
 
-1. For each supported locale, add a new ARB file in `lib/l10n/arb`.
+1. For each supported locale, add a new ARB file in `l10n/arb`.
 
 ```
 ├── l10n
@@ -161,7 +161,7 @@ To use the latest translations changes, you will need to generate them:
 1. Generate localizations for the current project:
 
 ```sh
-flutter gen-l10n --arb-dir="lib/l10n/arb"
+flutter gen-l10n --arb-dir="l10n/arb"
 ```
 
 Alternatively, run `flutter run` and code generation will take place automatically.
@@ -174,3 +174,4 @@ Alternatively, run `flutter run` and code generation will take place automatical
 [very_good_analysis_badge]: https://img.shields.io/badge/style-very_good_analysis-B22C89.svg
 [very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
 [very_good_cli_link]: https://github.com/VeryGoodOpenSource/very_good_cli
+[license_launcher]: Icono de Puesta En Marcha gratuito diseñado por Freepik <https://www.flaticon.es/icono-gratis/puesta-en-marcha_1067256?term=cohete> a través de @flaticon
