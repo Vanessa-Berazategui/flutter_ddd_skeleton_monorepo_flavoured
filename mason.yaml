@@ -1,15 +1,7 @@
 bricks:
-  data_layer_package:
-    path: flutter_bricks/data_layer_package
-  domain_layer_package:
-    path: flutter_bricks/domain_layer_package
   presentation_layer_package:
-    path: flutter_bricks/presentation_layer_package
-  presentation_layer_feature:
-    path: flutter_bricks/presentation_layer_feature
-  domain_layer_entity:
-    path: flutter_bricks/domain_layer_entity
-  data_layer_model:
-    path: flutter_bricks/data_layer_model
-  app_flavoured_feature:
-    path: flutter_bricks/app_flavoured_feature
+    path: ../flutter_bricks/presentation_layer_package
+  data_layer_package:
+    path: ../flutter_bricks/data_layer_package
+  domain_layer_package:
+    path: ../flutter_bricks/domain_layer_package

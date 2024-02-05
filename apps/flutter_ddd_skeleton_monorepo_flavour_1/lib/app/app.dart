@@ -1,5 +1,5 @@
 export 'package:flutter_bloc/flutter_bloc.dart';
-export 'package:flutter_ddd_skeleton_monorepo_presentation/flutter_ddd_skeleton_monorepo_presentation.dart';
+export 'package:flutter_ddd_skeleton_monorepo_flavoured_presentation/flutter_ddd_skeleton_monorepo_flavoured_presentation.dart';
 
 export 'assets/assets.dart';
 export 'dependencies/dependencies.dart';

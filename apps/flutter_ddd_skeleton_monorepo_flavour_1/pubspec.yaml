@@ -12,12 +12,12 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
-  flutter_ddd_skeleton_monorepo_data:
-    path: ../../packages/flutter_ddd_skeleton_monorepo_data
-  flutter_ddd_skeleton_monorepo_domain:
-    path: ../../packages/flutter_ddd_skeleton_monorepo_domain
-  flutter_ddd_skeleton_monorepo_presentation:
-    path: ../../packages/flutter_ddd_skeleton_monorepo_presentation
+  flutter_ddd_skeleton_monorepo_flavoured_data:
+    path: ../../packages/flutter_ddd_skeleton_monorepo_flavoured_data
+  flutter_ddd_skeleton_monorepo_flavoured_domain:
+    path: ../../packages/flutter_ddd_skeleton_monorepo_flavoured_domain
+  flutter_ddd_skeleton_monorepo_flavoured_presentation:
+    path: ../../packages/flutter_ddd_skeleton_monorepo_flavoured_presentation
   flutter_localizations:
     sdk: flutter
   flutter_secure_storage: ^9.0.0

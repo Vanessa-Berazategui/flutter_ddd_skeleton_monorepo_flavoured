@@ -1,8 +1,10 @@
 // Flutter imports:
 import 'package:flutter/foundation.dart';
 
+// Package imports:
+import 'package:flutter_ddd_skeleton_monorepo_flavoured_presentation/flutter_ddd_skeleton_monorepo_flavoured_presentation.dart';
+
 // Project imports:
-import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/counter/app_counter_page.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();

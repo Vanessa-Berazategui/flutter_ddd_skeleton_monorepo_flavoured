@@ -1,4 +1,4 @@
-# Flutter DDD Skeleton Monorepo
+# Flutter DDD Skeleton Monorepo Flavoured
 
 This is a Flutter project DDD skeleton, inspired by the amazing ResoCoder's tutorials:
 

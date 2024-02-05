@@ -1,4 +1,4 @@
-name: flutter_ddd_skeleton_monorepo_workspace
+name: flutter_ddd_skeleton_monorepo_flavoured_workspace
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

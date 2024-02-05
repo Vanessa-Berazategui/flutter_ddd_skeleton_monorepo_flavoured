@@ -1,0 +1,6 @@
+# melos_managed_dependency_overrides: flutter_ddd_skeleton_monorepo_flavoured_data,flutter_ddd_skeleton_monorepo_flavoured_domain
+dependency_overrides:
+  flutter_ddd_skeleton_monorepo_flavoured_data:
+    path: ../flutter_ddd_skeleton_monorepo_flavoured_data
+  flutter_ddd_skeleton_monorepo_flavoured_domain:
+    path: ../flutter_ddd_skeleton_monorepo_flavoured_domain
