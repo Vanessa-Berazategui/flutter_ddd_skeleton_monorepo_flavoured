@@ -1,10 +1,9 @@
 // Package imports:
 
-// Package imports:
-import 'package:injectable/injectable.dart';
-
 // Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_2/app/app.dart';
+// Package imports:
+import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: AppEnvironment, env: [AppEnvironment.prod])
 class AppEnvironmentProduction implements AppEnvironment {
