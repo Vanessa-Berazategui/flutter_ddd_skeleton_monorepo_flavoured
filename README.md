@@ -16,6 +16,7 @@ Also in this ready to go DDD skeleton is configured:
 * Cubit state management solution.
 * Freezed union/sealed repository responses.
 * Dio client for http requests.
+* Retrofit for define the API.
 * Apps flavour configuration.
 * File environment configuration.
 * Getit injection dependencies.
