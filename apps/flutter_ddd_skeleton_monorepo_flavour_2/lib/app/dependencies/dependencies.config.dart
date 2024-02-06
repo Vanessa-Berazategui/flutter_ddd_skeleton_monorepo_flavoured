@@ -8,16 +8,8 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-
-// Package imports:
 import 'package:device_info_plus/device_info_plus.dart' as _i8;
-import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i9;
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:injectable/injectable.dart' as _i2;
-
-// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_2/app/app.dart' as _i3;
-
 import 'package:flutter_ddd_skeleton_monorepo_flavour_2/app/dependencies/app_blocs_module.dart'
     as _i10;
 import 'package:flutter_ddd_skeleton_monorepo_flavour_2/app/dependencies/app_packages_module.dart'
@@ -30,6 +22,9 @@ import 'package:flutter_ddd_skeleton_monorepo_flavour_2/app/environment/app_envi
     as _i4;
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_presentation/flutter_ddd_skeleton_monorepo_flavoured_presentation.dart'
     as _i7;
+import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i9;
+import 'package:get_it/get_it.dart' as _i1;
+import 'package:injectable/injectable.dart' as _i2;
 
 const String _stg = 'stg';
 const String _dev = 'dev';
