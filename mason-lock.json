@@ -1,1 +1,1 @@
-{"bricks":{"presentation_layer_package":{"path":"./flutter_bricks/presentation_layer_package/"},"data_layer_package":{"path":"../flutter_bricks/data_layer_package"},"domain_layer_package":{"path":"../flutter_bricks/domain_layer_package"}}}
+{"bricks":{"data_layer_package":{"path":"/Users/vberazategui/Documents/GitHub/flutter_bricks/data_layer_package"},"domain_layer_package":{"path":"/Users/vberazategui/Documents/GitHub/flutter_bricks/domain_layer_package"},"presentation_layer_package":{"path":"/Users/vberazategui/Documents/GitHub/flutter_bricks/presentation_layer_package"}}}
