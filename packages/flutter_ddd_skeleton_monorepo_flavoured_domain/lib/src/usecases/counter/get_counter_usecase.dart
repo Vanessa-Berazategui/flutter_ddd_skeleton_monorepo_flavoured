@@ -3,8 +3,8 @@ import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/src/repositories/
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/src/result/result.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/src/usecases/usecases.dart';
 
-class GetCounterUseCase extends UseCase<int, NoParams> {
-  GetCounterUseCase({required CounterRepository repository})
+class GetCounterUseCase implements BaseUseCase<int, NoParams> {
+  const GetCounterUseCase({required CounterRepository repository})
       : _repository = repository;
 
   final CounterRepository _repository;
