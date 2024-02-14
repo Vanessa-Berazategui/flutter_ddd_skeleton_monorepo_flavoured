@@ -1,5 +1,4 @@
 // Package imports:
-import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
 
@@ -14,7 +13,4 @@ abstract class AppPackagesModule {
           encryptedSharedPreferences: true,
         ),
       );
-
-  @lazySingleton
-  DeviceInfoPlugin deviceInfoPlugin() => DeviceInfoPlugin();
 }

@@ -16,7 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$CounterState {
+  bool get loading => throw _privateConstructorUsedError;
   int get value => throw _privateConstructorUsedError;
+  Failure? get failure => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CounterStateCopyWith<CounterState> get copyWith =>
@@ -29,7 +31,9 @@ abstract class $CounterStateCopyWith<$Res> {
           CounterState value, $Res Function(CounterState) then) =
       _$CounterStateCopyWithImpl<$Res, CounterState>;
   @useResult
-  $Res call({int value});
+  $Res call({bool loading, int value, Failure? failure});
+
+  $FailureCopyWith<$Res>? get failure;
 }
 
 /// @nodoc
@@ -45,14 +49,36 @@ class _$CounterStateCopyWithImpl<$Res, $Val extends CounterState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? loading = null,
     Object? value = null,
+    Object? failure = freezed,
   }) {
     return _then(_value.copyWith(
+      loading: null == loading
+          ? _value.loading
+          : loading // ignore: cast_nullable_to_non_nullable
+              as bool,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as int,
+      failure: freezed == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FailureCopyWith<$Res>? get failure {
+    if (_value.failure == null) {
+      return null;
+    }
+
+    return $FailureCopyWith<$Res>(_value.failure!, (value) {
+      return _then(_value.copyWith(failure: value) as $Val);
+    });
   }
 }
 
@@ -64,7 +90,10 @@ abstract class _$$CounterStateImplCopyWith<$Res>
       __$$CounterStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int value});
+  $Res call({bool loading, int value, Failure? failure});
+
+  @override
+  $FailureCopyWith<$Res>? get failure;
 }
 
 /// @nodoc
@@ -78,13 +107,23 @@ class __$$CounterStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? loading = null,
     Object? value = null,
+    Object? failure = freezed,
   }) {
     return _then(_$CounterStateImpl(
+      loading: null == loading
+          ? _value.loading
+          : loading // ignore: cast_nullable_to_non_nullable
+              as bool,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as int,
+      failure: freezed == failure
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure?,
     ));
   }
 }
@@ -92,14 +131,19 @@ class __$$CounterStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$CounterStateImpl implements _CounterState {
-  const _$CounterStateImpl({required this.value});
+  const _$CounterStateImpl(
+      {required this.loading, required this.value, this.failure});
 
   @override
+  final bool loading;
+  @override
   final int value;
+  @override
+  final Failure? failure;
 
   @override
   String toString() {
-    return 'CounterState(value: $value)';
+    return 'CounterState(loading: $loading, value: $value, failure: $failure)';
   }
 
   @override
@@ -107,11 +151,13 @@ class _$CounterStateImpl implements _CounterState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CounterStateImpl &&
-            (identical(other.value, value) || other.value == value));
+            (identical(other.loading, loading) || other.loading == loading) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, value);
+  int get hashCode => Object.hash(runtimeType, loading, value, failure);
 
   @JsonKey(ignore: true)
   @override
@@ -121,10 +167,17 @@ class _$CounterStateImpl implements _CounterState {
 }
 
 abstract class _CounterState implements CounterState {
-  const factory _CounterState({required final int value}) = _$CounterStateImpl;
+  const factory _CounterState(
+      {required final bool loading,
+      required final int value,
+      final Failure? failure}) = _$CounterStateImpl;
 
   @override
+  bool get loading;
+  @override
   int get value;
+  @override
+  Failure? get failure;
   @override
   @JsonKey(ignore: true)
   _$$CounterStateImplCopyWith<_$CounterStateImpl> get copyWith =>

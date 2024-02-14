@@ -2,10 +2,12 @@
 import 'dart:async';
 import 'dart:developer';
 
-// Package imports:
-import 'package:bloc/bloc.dart';
 // Flutter imports:
 import 'package:flutter/widgets.dart';
+
+// Package imports:
+import 'package:bloc/bloc.dart';
+
 // Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_2/app/dependencies/dependencies.dart';
 

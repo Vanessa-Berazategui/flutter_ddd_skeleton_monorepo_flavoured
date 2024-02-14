@@ -42,9 +42,9 @@ extension BuildContextX on BuildContext {
           ),
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          margin: const EdgeInsets.all(16).copyWith(bottom: 50),
+          margin: const EdgeInsets.all(16),
           duration: const Duration(milliseconds: 2000),
-          elevation: 20,
+          elevation: 6,
         ),
       );
 

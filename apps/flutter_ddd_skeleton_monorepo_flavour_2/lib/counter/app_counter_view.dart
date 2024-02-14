@@ -14,6 +14,7 @@ class AppCounterView extends StatelessWidget {
 
     return CounterView(
       appBarText: l10n.counterAppBarTitle,
+      emptyCacheText: l10n.counterEmptyCache,
     );
   }
 }

@@ -1,9 +1,13 @@
+// Dart imports:
 import 'dart:developer';
 
+// Package imports:
 import 'package:dio/dio.dart';
+import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
+
+// Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/exceptions/exceptions.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/types.dart';
-import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
 
 extension ErrorHandler on BaseRepository {
   Future<Result<T>> process<T>({
