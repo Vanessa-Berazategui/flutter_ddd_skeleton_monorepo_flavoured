@@ -28,3 +28,5 @@ doc/api/
 
 # FVM files and directories
 .fvm/flutter_sdk
+.idea/
+.DS_Store
