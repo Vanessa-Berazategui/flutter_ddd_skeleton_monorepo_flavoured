@@ -30,3 +30,7 @@ doc/api/
 .fvm/flutter_sdk
 .idea/
 .DS_Store
+
+#Credentials
+apps/flutter_ddd_skeleton_monorepo_flavour_1/numbersapi.md
+apps/flutter_ddd_skeleton_monorepo_flavour_2/numbersapi.md
