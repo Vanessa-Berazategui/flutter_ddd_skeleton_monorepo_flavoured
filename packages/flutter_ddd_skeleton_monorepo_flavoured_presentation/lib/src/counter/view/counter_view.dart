@@ -1,5 +1,4 @@
 // Project imports:
-import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_presentation/flutter_ddd_skeleton_monorepo_flavoured_presentation.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_presentation/src/core/core.dart';
 

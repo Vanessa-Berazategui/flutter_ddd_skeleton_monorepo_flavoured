@@ -1,3 +1,4 @@
+// Package imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_presentation/flutter_ddd_skeleton_monorepo_flavoured_presentation.dart';
 
 class MaterialTheme {
