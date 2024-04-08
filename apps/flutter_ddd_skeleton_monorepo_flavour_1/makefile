@@ -41,7 +41,7 @@ fix: ## Fixing the code
 .PHONY: icon
 icon: ## Generates launcher icon
 	@echo "╠ Making launcher icon"
-	fvm flutter pub run flutter_launcher_icons
+	fvm dart run icons_launcher:create
 
 .PHONY: splash
 splash: ## Generates native splash
