@@ -8,6 +8,7 @@ environment:
 
 dependencies:
   dio: ^5.0.0
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_ddd_skeleton_monorepo_flavoured_domain:
