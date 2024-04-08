@@ -1,9 +1,8 @@
 // Package imports:
-import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
-import 'package:json_annotation/json_annotation.dart';
-
 // Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/models/base/base_model.dart';
+import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'counter_data_params.g.dart';
 

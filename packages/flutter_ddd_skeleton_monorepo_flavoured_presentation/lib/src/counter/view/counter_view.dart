@@ -15,11 +15,14 @@ class CounterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = context.theme;
+    final colors = context.colors;
+
     final bloc = context.read<CounterBloc>();
 
     return Scaffold(
       body: BlocConsumer<CounterBloc, CounterState>(
-        listenWhen: (previous, current) => previous.failure != current.failure,
+        listenWhen: (previous, current) =>
+            current.failure != null || current.isDone,
         listener: (context, state) {
           if (state.failure != null) {
             context.showWarnMessage(emptyCacheText);
@@ -28,16 +31,34 @@ class CounterView extends StatelessWidget {
         },
         buildWhen: (previous, current) =>
             previous.loading != current.loading ||
-            previous.value != current.value,
+            previous.value != current.value ||
+            previous.quiz != current.quiz,
         builder: (context, state) {
           return Stack(
+            fit: StackFit.expand,
             children: [
               Scaffold(
                 appBar: AppBar(title: Text(appBarText)),
                 body: Center(
-                  child: Text(
-                    '${state.value}',
-                    style: theme.textTheme.displayLarge,
+                  child: Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '${state.value}',
+                          style: theme.textTheme.displayLarge?.copyWith(
+                            color: colors.secondary,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          state.quiz,
+                          style: theme.textTheme.bodyLarge
+                              ?.copyWith(color: colors.primary),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 floatingActionButton: Column(
@@ -58,6 +79,11 @@ class CounterView extends StatelessWidget {
                     FloatingActionButton(
                       onPressed: bloc.save,
                       child: const Icon(Icons.save),
+                    ),
+                    const SizedBox(height: 8),
+                    FloatingActionButton(
+                      onPressed: bloc.quiz,
+                      child: const Icon(Icons.quiz),
                     ),
                   ],
                 ),

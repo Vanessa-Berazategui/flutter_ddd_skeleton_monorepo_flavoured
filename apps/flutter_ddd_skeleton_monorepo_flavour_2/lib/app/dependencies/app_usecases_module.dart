@@ -18,4 +18,10 @@ abstract class AppUseCasesModule {
     CounterRepository repository,
   ) =>
       SaveCounterUseCase(repository: repository);
+
+  @lazySingleton
+  QuizCounterUseCase quizCounterUseCase(
+    CounterRepository repository,
+  ) =>
+      QuizCounterUseCase(repository: repository);
 }

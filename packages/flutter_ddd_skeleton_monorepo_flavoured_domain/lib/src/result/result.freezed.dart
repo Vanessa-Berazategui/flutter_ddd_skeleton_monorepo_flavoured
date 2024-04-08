@@ -368,6 +368,8 @@ Failure _$FailureFromJson(Map<String, dynamic> json) {
       return _FailureReceiveTimeout.fromJson(json);
     case 'cache':
       return _FailureCache.fromJson(json);
+    case 'quiz':
+      return _FailureQuiz.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Failure',
@@ -386,6 +388,7 @@ mixin _$Failure {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -397,6 +400,7 @@ mixin _$Failure {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -408,6 +412,7 @@ mixin _$Failure {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -420,6 +425,7 @@ mixin _$Failure {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -431,6 +437,7 @@ mixin _$Failure {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -442,6 +449,7 @@ mixin _$Failure {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -553,6 +561,7 @@ class _$FailureServerImpl implements _FailureServer {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return server(message, code);
   }
@@ -567,6 +576,7 @@ class _$FailureServerImpl implements _FailureServer {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return server?.call(message, code);
   }
@@ -581,6 +591,7 @@ class _$FailureServerImpl implements _FailureServer {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -599,6 +610,7 @@ class _$FailureServerImpl implements _FailureServer {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return server(this);
   }
@@ -613,6 +625,7 @@ class _$FailureServerImpl implements _FailureServer {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return server?.call(this);
   }
@@ -627,6 +640,7 @@ class _$FailureServerImpl implements _FailureServer {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (server != null) {
@@ -737,6 +751,7 @@ class _$FailureUnauthorizedImpl implements _FailureUnauthorized {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return unauthorized(message);
   }
@@ -751,6 +766,7 @@ class _$FailureUnauthorizedImpl implements _FailureUnauthorized {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return unauthorized?.call(message);
   }
@@ -765,6 +781,7 @@ class _$FailureUnauthorizedImpl implements _FailureUnauthorized {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (unauthorized != null) {
@@ -783,6 +800,7 @@ class _$FailureUnauthorizedImpl implements _FailureUnauthorized {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return unauthorized(this);
   }
@@ -797,6 +815,7 @@ class _$FailureUnauthorizedImpl implements _FailureUnauthorized {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return unauthorized?.call(this);
   }
@@ -811,6 +830,7 @@ class _$FailureUnauthorizedImpl implements _FailureUnauthorized {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (unauthorized != null) {
@@ -918,6 +938,7 @@ class _$FailureUnexpectedImpl implements _FailureUnexpected {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return unexpected(e);
   }
@@ -932,6 +953,7 @@ class _$FailureUnexpectedImpl implements _FailureUnexpected {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return unexpected?.call(e);
   }
@@ -946,6 +968,7 @@ class _$FailureUnexpectedImpl implements _FailureUnexpected {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -964,6 +987,7 @@ class _$FailureUnexpectedImpl implements _FailureUnexpected {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return unexpected(this);
   }
@@ -978,6 +1002,7 @@ class _$FailureUnexpectedImpl implements _FailureUnexpected {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return unexpected?.call(this);
   }
@@ -992,6 +1017,7 @@ class _$FailureUnexpectedImpl implements _FailureUnexpected {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -1075,6 +1101,7 @@ class _$FailureConnectTimeOutImpl implements _FailureConnectTimeOut {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return connectTimeout();
   }
@@ -1089,6 +1116,7 @@ class _$FailureConnectTimeOutImpl implements _FailureConnectTimeOut {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return connectTimeout?.call();
   }
@@ -1103,6 +1131,7 @@ class _$FailureConnectTimeOutImpl implements _FailureConnectTimeOut {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -1121,6 +1150,7 @@ class _$FailureConnectTimeOutImpl implements _FailureConnectTimeOut {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return connectTimeout(this);
   }
@@ -1135,6 +1165,7 @@ class _$FailureConnectTimeOutImpl implements _FailureConnectTimeOut {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return connectTimeout?.call(this);
   }
@@ -1149,6 +1180,7 @@ class _$FailureConnectTimeOutImpl implements _FailureConnectTimeOut {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (connectTimeout != null) {
@@ -1225,6 +1257,7 @@ class _$FailureSendTimeOutImpl implements _FailureSendTimeOut {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return sendTimeout();
   }
@@ -1239,6 +1272,7 @@ class _$FailureSendTimeOutImpl implements _FailureSendTimeOut {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return sendTimeout?.call();
   }
@@ -1253,6 +1287,7 @@ class _$FailureSendTimeOutImpl implements _FailureSendTimeOut {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -1271,6 +1306,7 @@ class _$FailureSendTimeOutImpl implements _FailureSendTimeOut {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return sendTimeout(this);
   }
@@ -1285,6 +1321,7 @@ class _$FailureSendTimeOutImpl implements _FailureSendTimeOut {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return sendTimeout?.call(this);
   }
@@ -1299,6 +1336,7 @@ class _$FailureSendTimeOutImpl implements _FailureSendTimeOut {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (sendTimeout != null) {
@@ -1377,6 +1415,7 @@ class _$FailureReceiveTimeoutImpl implements _FailureReceiveTimeout {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return receiveTimeout();
   }
@@ -1391,6 +1430,7 @@ class _$FailureReceiveTimeoutImpl implements _FailureReceiveTimeout {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return receiveTimeout?.call();
   }
@@ -1405,6 +1445,7 @@ class _$FailureReceiveTimeoutImpl implements _FailureReceiveTimeout {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -1423,6 +1464,7 @@ class _$FailureReceiveTimeoutImpl implements _FailureReceiveTimeout {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return receiveTimeout(this);
   }
@@ -1437,6 +1479,7 @@ class _$FailureReceiveTimeoutImpl implements _FailureReceiveTimeout {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return receiveTimeout?.call(this);
   }
@@ -1451,6 +1494,7 @@ class _$FailureReceiveTimeoutImpl implements _FailureReceiveTimeout {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (receiveTimeout != null) {
@@ -1526,6 +1570,7 @@ class _$FailureCacheImpl implements _FailureCache {
     required TResult Function() sendTimeout,
     required TResult Function() receiveTimeout,
     required TResult Function() cache,
+    required TResult Function() quiz,
   }) {
     return cache();
   }
@@ -1540,6 +1585,7 @@ class _$FailureCacheImpl implements _FailureCache {
     TResult? Function()? sendTimeout,
     TResult? Function()? receiveTimeout,
     TResult? Function()? cache,
+    TResult? Function()? quiz,
   }) {
     return cache?.call();
   }
@@ -1554,6 +1600,7 @@ class _$FailureCacheImpl implements _FailureCache {
     TResult Function()? sendTimeout,
     TResult Function()? receiveTimeout,
     TResult Function()? cache,
+    TResult Function()? quiz,
     required TResult orElse(),
   }) {
     if (cache != null) {
@@ -1572,6 +1619,7 @@ class _$FailureCacheImpl implements _FailureCache {
     required TResult Function(_FailureSendTimeOut value) sendTimeout,
     required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
     required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
   }) {
     return cache(this);
   }
@@ -1586,6 +1634,7 @@ class _$FailureCacheImpl implements _FailureCache {
     TResult? Function(_FailureSendTimeOut value)? sendTimeout,
     TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
   }) {
     return cache?.call(this);
   }
@@ -1600,6 +1649,7 @@ class _$FailureCacheImpl implements _FailureCache {
     TResult Function(_FailureSendTimeOut value)? sendTimeout,
     TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
     TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
     required TResult orElse(),
   }) {
     if (cache != null) {
@@ -1621,4 +1671,159 @@ abstract class _FailureCache implements Failure {
 
   factory _FailureCache.fromJson(Map<String, dynamic> json) =
       _$FailureCacheImpl.fromJson;
+}
+
+/// @nodoc
+abstract class _$$FailureQuizImplCopyWith<$Res> {
+  factory _$$FailureQuizImplCopyWith(
+          _$FailureQuizImpl value, $Res Function(_$FailureQuizImpl) then) =
+      __$$FailureQuizImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FailureQuizImplCopyWithImpl<$Res>
+    extends _$FailureCopyWithImpl<$Res, _$FailureQuizImpl>
+    implements _$$FailureQuizImplCopyWith<$Res> {
+  __$$FailureQuizImplCopyWithImpl(
+      _$FailureQuizImpl _value, $Res Function(_$FailureQuizImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$FailureQuizImpl implements _FailureQuiz {
+  const _$FailureQuizImpl({final String? $type}) : $type = $type ?? 'quiz';
+
+  factory _$FailureQuizImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FailureQuizImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Failure.quiz()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FailureQuizImpl);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message, int? code) server,
+    required TResult Function(String message) unauthorized,
+    required TResult Function(Object e) unexpected,
+    required TResult Function() connectTimeout,
+    required TResult Function() sendTimeout,
+    required TResult Function() receiveTimeout,
+    required TResult Function() cache,
+    required TResult Function() quiz,
+  }) {
+    return quiz();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String message, int? code)? server,
+    TResult? Function(String message)? unauthorized,
+    TResult? Function(Object e)? unexpected,
+    TResult? Function()? connectTimeout,
+    TResult? Function()? sendTimeout,
+    TResult? Function()? receiveTimeout,
+    TResult? Function()? cache,
+    TResult? Function()? quiz,
+  }) {
+    return quiz?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message, int? code)? server,
+    TResult Function(String message)? unauthorized,
+    TResult Function(Object e)? unexpected,
+    TResult Function()? connectTimeout,
+    TResult Function()? sendTimeout,
+    TResult Function()? receiveTimeout,
+    TResult Function()? cache,
+    TResult Function()? quiz,
+    required TResult orElse(),
+  }) {
+    if (quiz != null) {
+      return quiz();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FailureServer value) server,
+    required TResult Function(_FailureUnauthorized value) unauthorized,
+    required TResult Function(_FailureUnexpected value) unexpected,
+    required TResult Function(_FailureConnectTimeOut value) connectTimeout,
+    required TResult Function(_FailureSendTimeOut value) sendTimeout,
+    required TResult Function(_FailureReceiveTimeout value) receiveTimeout,
+    required TResult Function(_FailureCache value) cache,
+    required TResult Function(_FailureQuiz value) quiz,
+  }) {
+    return quiz(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FailureServer value)? server,
+    TResult? Function(_FailureUnauthorized value)? unauthorized,
+    TResult? Function(_FailureUnexpected value)? unexpected,
+    TResult? Function(_FailureConnectTimeOut value)? connectTimeout,
+    TResult? Function(_FailureSendTimeOut value)? sendTimeout,
+    TResult? Function(_FailureReceiveTimeout value)? receiveTimeout,
+    TResult? Function(_FailureCache value)? cache,
+    TResult? Function(_FailureQuiz value)? quiz,
+  }) {
+    return quiz?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FailureServer value)? server,
+    TResult Function(_FailureUnauthorized value)? unauthorized,
+    TResult Function(_FailureUnexpected value)? unexpected,
+    TResult Function(_FailureConnectTimeOut value)? connectTimeout,
+    TResult Function(_FailureSendTimeOut value)? sendTimeout,
+    TResult Function(_FailureReceiveTimeout value)? receiveTimeout,
+    TResult Function(_FailureCache value)? cache,
+    TResult Function(_FailureQuiz value)? quiz,
+    required TResult orElse(),
+  }) {
+    if (quiz != null) {
+      return quiz(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$FailureQuizImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _FailureQuiz implements Failure {
+  const factory _FailureQuiz() = _$FailureQuizImpl;
+
+  factory _FailureQuiz.fromJson(Map<String, dynamic> json) =
+      _$FailureQuizImpl.fromJson;
 }

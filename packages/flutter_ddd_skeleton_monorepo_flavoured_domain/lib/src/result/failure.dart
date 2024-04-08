@@ -19,6 +19,8 @@ sealed class Failure with _$Failure {
 
   const factory Failure.cache() = _FailureCache;
 
+  const factory Failure.quiz() = _FailureQuiz;
+
   factory Failure.fromJson(Map<String, dynamic> json) =>
       _$FailureFromJson(json);
 }
@@ -32,5 +34,6 @@ extension FailureX on Failure {
         sendTimeout: (sendTimeout) => 'Send Timeout error',
         receiveTimeout: (receiveTimeout) => 'Receive Timeout error',
         cache: (cache) => 'Cache error',
+        quiz: (quiz) => 'Quiz not resolved',
       );
 }

@@ -13,9 +13,11 @@ abstract class AppBlocsModule {
   CounterBloc counterBloc(
     SaveCounterUseCase saveCounterUseCase,
     GetCounterUseCase getCounterUseCase,
+    QuizCounterUseCase quizCounterUseCase,
   ) =>
       CounterBloc(
         saveCounterUseCase: saveCounterUseCase,
         getCounterUseCase: getCounterUseCase,
+        quizCounterUseCase: quizCounterUseCase,
       );
 }

@@ -1,1 +1,3 @@
-abstract class Endpoint {}
+abstract class Endpoint {
+  static const quizCounter = '/{number}/math';
+}

@@ -93,3 +93,13 @@ Map<String, dynamic> _$$FailureCacheImplToJson(_$FailureCacheImpl instance) =>
     <String, dynamic>{
       'runtimeType': instance.$type,
     };
+
+_$FailureQuizImpl _$$FailureQuizImplFromJson(Map<String, dynamic> json) =>
+    _$FailureQuizImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$FailureQuizImplToJson(_$FailureQuizImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };

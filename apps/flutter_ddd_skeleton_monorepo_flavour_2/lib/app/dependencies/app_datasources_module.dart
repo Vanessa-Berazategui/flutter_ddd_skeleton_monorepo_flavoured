@@ -12,9 +12,9 @@ abstract class AppDataSourcesModule {
   //============================
   @lazySingleton
   CounterRemoteDataSource counterRemoteDataSource(
-          //  FlutterDddSkeletonMonorepoFlavouredApi api,
-          ) =>
-      CounterRemoteDataSource(/*api: api*/);
+    FlutterDddSkeletonMonorepoFlavouredApi api,
+  ) =>
+      CounterRemoteDataSource(api: api);
 
   @lazySingleton
   CounterLocalDataSource counterLocalDataSource(

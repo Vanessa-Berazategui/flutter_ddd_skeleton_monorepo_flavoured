@@ -2,12 +2,28 @@
 import 'package:dio/dio.dart';
 
 class HttpAuthorizationInterceptor extends QueuedInterceptor {
+  HttpAuthorizationInterceptor({
+    required String apiKey,
+    required String apiHost,
+  })  : _apiKey = apiKey,
+        _apiHost = apiHost;
+
+  final String _apiKey;
+  final String _apiHost;
+
   /// Called when the request is about to be sent.
   @override
   void onRequest(
     RequestOptions options,
     RequestInterceptorHandler handler,
   ) {
+    options.headers.addAll(
+      {
+        'X-RapidAPI-Key': _apiKey,
+        'X-RapidAPI-Host': _apiHost,
+      },
+    );
+
     handler.next(options);
   }
 

@@ -1,12 +1,18 @@
+// Package imports:
 // Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavour_1/app/app.dart';
-// Package imports:
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: AppEnvironment, env: [AppEnvironment.dev])
 class AppEnvironmentDevelopment implements AppEnvironment {
   @override
-  String get baseUrl => '';
+  String get baseUrl => 'https://numbersapi.p.rapidapi.com';
+
+  @override
+  String get apiKey => '';
+
+  @override
+  String get apiHost => 'numbersapi.p.rapidapi.com';
 
   @override
   int get connectTimeout => 30000;

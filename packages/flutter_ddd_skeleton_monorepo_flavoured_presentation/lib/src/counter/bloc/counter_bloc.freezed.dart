@@ -17,7 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$CounterState {
   bool get loading => throw _privateConstructorUsedError;
+  bool get isDone => throw _privateConstructorUsedError;
   int get value => throw _privateConstructorUsedError;
+  String get quiz => throw _privateConstructorUsedError;
   Failure? get failure => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -31,7 +33,8 @@ abstract class $CounterStateCopyWith<$Res> {
           CounterState value, $Res Function(CounterState) then) =
       _$CounterStateCopyWithImpl<$Res, CounterState>;
   @useResult
-  $Res call({bool loading, int value, Failure? failure});
+  $Res call(
+      {bool loading, bool isDone, int value, String quiz, Failure? failure});
 
   $FailureCopyWith<$Res>? get failure;
 }
@@ -50,7 +53,9 @@ class _$CounterStateCopyWithImpl<$Res, $Val extends CounterState>
   @override
   $Res call({
     Object? loading = null,
+    Object? isDone = null,
     Object? value = null,
+    Object? quiz = null,
     Object? failure = freezed,
   }) {
     return _then(_value.copyWith(
@@ -58,10 +63,18 @@ class _$CounterStateCopyWithImpl<$Res, $Val extends CounterState>
           ? _value.loading
           : loading // ignore: cast_nullable_to_non_nullable
               as bool,
+      isDone: null == isDone
+          ? _value.isDone
+          : isDone // ignore: cast_nullable_to_non_nullable
+              as bool,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as int,
+      quiz: null == quiz
+          ? _value.quiz
+          : quiz // ignore: cast_nullable_to_non_nullable
+              as String,
       failure: freezed == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -90,7 +103,8 @@ abstract class _$$CounterStateImplCopyWith<$Res>
       __$$CounterStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool loading, int value, Failure? failure});
+  $Res call(
+      {bool loading, bool isDone, int value, String quiz, Failure? failure});
 
   @override
   $FailureCopyWith<$Res>? get failure;
@@ -108,7 +122,9 @@ class __$$CounterStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? loading = null,
+    Object? isDone = null,
     Object? value = null,
+    Object? quiz = null,
     Object? failure = freezed,
   }) {
     return _then(_$CounterStateImpl(
@@ -116,10 +132,18 @@ class __$$CounterStateImplCopyWithImpl<$Res>
           ? _value.loading
           : loading // ignore: cast_nullable_to_non_nullable
               as bool,
+      isDone: null == isDone
+          ? _value.isDone
+          : isDone // ignore: cast_nullable_to_non_nullable
+              as bool,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as int,
+      quiz: null == quiz
+          ? _value.quiz
+          : quiz // ignore: cast_nullable_to_non_nullable
+              as String,
       failure: freezed == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -132,18 +156,26 @@ class __$$CounterStateImplCopyWithImpl<$Res>
 
 class _$CounterStateImpl implements _CounterState {
   const _$CounterStateImpl(
-      {required this.loading, required this.value, this.failure});
+      {required this.loading,
+      required this.isDone,
+      required this.value,
+      required this.quiz,
+      this.failure});
 
   @override
   final bool loading;
   @override
+  final bool isDone;
+  @override
   final int value;
+  @override
+  final String quiz;
   @override
   final Failure? failure;
 
   @override
   String toString() {
-    return 'CounterState(loading: $loading, value: $value, failure: $failure)';
+    return 'CounterState(loading: $loading, isDone: $isDone, value: $value, quiz: $quiz, failure: $failure)';
   }
 
   @override
@@ -152,12 +184,15 @@ class _$CounterStateImpl implements _CounterState {
         (other.runtimeType == runtimeType &&
             other is _$CounterStateImpl &&
             (identical(other.loading, loading) || other.loading == loading) &&
+            (identical(other.isDone, isDone) || other.isDone == isDone) &&
             (identical(other.value, value) || other.value == value) &&
+            (identical(other.quiz, quiz) || other.quiz == quiz) &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, loading, value, failure);
+  int get hashCode =>
+      Object.hash(runtimeType, loading, isDone, value, quiz, failure);
 
   @JsonKey(ignore: true)
   @override
@@ -169,13 +204,19 @@ class _$CounterStateImpl implements _CounterState {
 abstract class _CounterState implements CounterState {
   const factory _CounterState(
       {required final bool loading,
+      required final bool isDone,
       required final int value,
+      required final String quiz,
       final Failure? failure}) = _$CounterStateImpl;
 
   @override
   bool get loading;
   @override
+  bool get isDone;
+  @override
   int get value;
+  @override
+  String get quiz;
   @override
   Failure? get failure;
   @override

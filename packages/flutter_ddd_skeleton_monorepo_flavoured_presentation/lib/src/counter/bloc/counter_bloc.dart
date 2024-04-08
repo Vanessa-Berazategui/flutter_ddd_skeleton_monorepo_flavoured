@@ -10,31 +10,31 @@ class CounterBloc extends Cubit<CounterState> {
   CounterBloc({
     required SaveCounterUseCase saveCounterUseCase,
     required GetCounterUseCase getCounterUseCase,
+    required QuizCounterUseCase quizCounterUseCase,
   })  : _saveCounterUseCase = saveCounterUseCase,
         _getCounterUseCase = getCounterUseCase,
+        _quizCounterUseCase = quizCounterUseCase,
         super(CounterState.init()) {
     _loadData();
   }
 
   final SaveCounterUseCase _saveCounterUseCase;
   final GetCounterUseCase _getCounterUseCase;
+  final QuizCounterUseCase _quizCounterUseCase;
 
   Future<void> _loadData() async {
-    emit(state.copyWith(loading: true));
-
     final result = await _getCounterUseCase.call(const NoParams());
 
     result.when(
       success: (value) => emit(
         state.copyWith(
-          loading: false,
+          isDone: true,
           failure: null,
           value: value,
         ),
       ),
       failure: (failure) => emit(
         state.copyWith(
-          loading: false,
           failure: failure,
         ),
       ),
@@ -59,6 +59,32 @@ class CounterBloc extends Cubit<CounterState> {
         state.copyWith(
           loading: false,
           failure: null,
+        ),
+      ),
+      failure: (failure) => emit(
+        state.copyWith(
+          loading: false,
+          failure: failure,
+        ),
+      ),
+    );
+  }
+
+  Future<void> quiz() async {
+    emit(state.copyWith(loading: true));
+
+    final result = await _quizCounterUseCase.call(
+      CounterParams(
+        value: state.value,
+      ),
+    );
+
+    result.when(
+      success: (quiz) => emit(
+        state.copyWith(
+          loading: false,
+          failure: null,
+          quiz: quiz,
         ),
       ),
       failure: (failure) => emit(

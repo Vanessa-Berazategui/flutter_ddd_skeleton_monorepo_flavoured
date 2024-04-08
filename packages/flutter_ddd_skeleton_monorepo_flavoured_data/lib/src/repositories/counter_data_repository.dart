@@ -1,8 +1,10 @@
 // Package imports:
+
 // Project imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/api/params/counter_data_params.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/datasources/datasources.dart';
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/extensions/extensions.dart';
+// Package imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
 
 class CounterDataRepository implements CounterRepository {
@@ -23,6 +25,13 @@ class CounterDataRepository implements CounterRepository {
   @override
   Future<Result<void>> saveCounter(CounterParams params) async => process(
         action: () => _localDataSource.saveCounter(
+          CounterDataParams.fromDomain(params),
+        ),
+      );
+
+  @override
+  Future<Result<String>> quizCounter(CounterParams params) async => process(
+        action: () => _remoteDataSource.quizCounter(
           CounterDataParams.fromDomain(params),
         ),
       );
