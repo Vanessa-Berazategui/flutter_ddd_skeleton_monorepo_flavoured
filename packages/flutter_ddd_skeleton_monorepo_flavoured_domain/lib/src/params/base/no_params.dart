@@ -1,7 +1,7 @@
 // Project imports:
-import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/src/params/base/base.dart';
+import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
 
-class NoParams extends BaseParams {
+class NoParams extends BaseEntity {
   const NoParams();
 
   @override

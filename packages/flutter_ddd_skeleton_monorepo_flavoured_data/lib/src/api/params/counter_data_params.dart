@@ -1,11 +1,21 @@
 // Package imports:
 import 'package:flutter_ddd_skeleton_monorepo_flavoured_domain/flutter_ddd_skeleton_monorepo_flavoured_domain.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-class CounterDataParams extends CounterParams {
+// Project imports:
+import 'package:flutter_ddd_skeleton_monorepo_flavoured_data/src/models/base/base_model.dart';
+
+part 'counter_data_params.g.dart';
+
+@JsonSerializable(explicitToJson: true)
+class CounterDataParams extends CounterParams implements BaseModel {
   const CounterDataParams({required super.value});
 
   factory CounterDataParams.fromDomain(CounterParams params) =>
       CounterDataParams(
         value: params.value,
       );
+
+  @override
+  Map<String, dynamic> toJson() => _$CounterDataParamsToJson(this);
 }
