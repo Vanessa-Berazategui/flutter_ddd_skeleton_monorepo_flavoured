@@ -5,9 +5,9 @@ This is a Flutter project DDD skeleton, inspired by the amazing ResoCoder's tuto
 [Flutter TDD Clean Architecture](https://www.youtube.com/playlist?list=PLB6lc7nQ1n4iYGE_khpXRdJkJEp9WOech)
 [Flutter Firebase & DDD](https://www.youtube.com/playlist?list=PLB6lc7nQ1n4iS5p-IezFFgqP6YvAJy84U)
 
-![](docs/CleanArchitecture.jpg)
+![](docs/images/CleanArchitecture.jpg)
 
-![](docs/Clean-Architecture-Flutter-Diagram.png)
+![](docs/images/Clean-Architecture-Flutter-Diagram.png)
 
 [Number blocks icons created by surang](<https://www.flaticon.com/free-icons/number-blocks>)
 
