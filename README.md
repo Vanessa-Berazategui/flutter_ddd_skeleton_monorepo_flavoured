@@ -9,6 +9,8 @@ This is a Flutter project DDD skeleton, inspired by the amazing ResoCoder's tuto
 
 ![](docs/Clean-Architecture-Flutter-Diagram.png)
 
+[Number blocks icons created by surang](<https://www.flaticon.com/free-icons/number-blocks>)
+
 Also in this ready to go DDD skeleton is configured:
 
 * Theming.
