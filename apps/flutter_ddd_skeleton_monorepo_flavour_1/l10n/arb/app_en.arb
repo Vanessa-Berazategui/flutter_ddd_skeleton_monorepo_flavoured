@@ -7,5 +7,9 @@
     "counterEmptyCache": "Unsaved counter value",
     "@counterEmptyCache": {
         "description": "Text shown if there is no cache value"
+    },
+    "counterEmptyQuiz": "There's no info for your number",
+    "@counterEmptyQuiz": {
+        "description": "Text shown if there is no info for value"
     }
 }
