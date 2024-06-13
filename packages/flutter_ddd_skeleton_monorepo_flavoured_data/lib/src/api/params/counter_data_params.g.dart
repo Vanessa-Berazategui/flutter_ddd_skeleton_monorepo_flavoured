@@ -8,7 +8,7 @@ part of 'counter_data_params.dart';
 
 CounterDataParams _$CounterDataParamsFromJson(Map<String, dynamic> json) =>
     CounterDataParams(
-      value: json['value'] as int,
+      value: (json['value'] as num).toInt(),
     );
 
 Map<String, dynamic> _$CounterDataParamsToJson(CounterDataParams instance) =>

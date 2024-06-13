@@ -9,7 +9,7 @@ part of 'result.dart';
 _$FailureServerImpl _$$FailureServerImplFromJson(Map<String, dynamic> json) =>
     _$FailureServerImpl(
       message: json['message'] as String,
-      code: json['code'] as int?,
+      code: (json['code'] as num?)?.toInt(),
       $type: json['runtimeType'] as String?,
     );
 

@@ -10,7 +10,7 @@ CounterResponse _$CounterResponseFromJson(Map<String, dynamic> json) =>
     CounterResponse(
       text: json['text'] as String,
       found: json['found'] as bool,
-      number: json['number'] as int,
+      number: (json['number'] as num).toInt(),
       type: json['type'] as String,
     );
 
