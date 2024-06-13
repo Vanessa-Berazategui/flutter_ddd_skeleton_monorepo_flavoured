@@ -69,19 +69,20 @@ class CounterView extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 16),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(16)),
-                          color: colors.primary,
+                      if (state.quiz.isNotEmpty)
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(16)),
+                            color: colors.primary,
+                          ),
+                          padding: const EdgeInsets.all(16),
+                          child: Text(
+                            state.quiz.toUpperCase(),
+                            style: theme.textTheme.bodyLarge
+                                ?.copyWith(color: colors.onPrimary),
+                          ),
                         ),
-                        padding: const EdgeInsets.all(16),
-                        child: Text(
-                          state.quiz.toUpperCase(),
-                          style: theme.textTheme.bodyLarge
-                              ?.copyWith(color: colors.onPrimary),
-                        ),
-                      ),
                     ],
                   ),
                 ),
