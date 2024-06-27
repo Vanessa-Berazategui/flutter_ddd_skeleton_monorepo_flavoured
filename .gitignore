@@ -34,3 +34,7 @@ doc/api/
 #Credentials
 apps/flutter_ddd_skeleton_monorepo_flavour_1/numbersapi.md
 apps/flutter_ddd_skeleton_monorepo_flavour_2/numbersapi.md
+
+# Coverage
+coverage/
+report/

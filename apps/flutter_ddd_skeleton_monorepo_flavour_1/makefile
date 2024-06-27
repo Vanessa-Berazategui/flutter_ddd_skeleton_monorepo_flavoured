@@ -99,5 +99,18 @@ sort: ## Sorting dependencies
 	@echo "╠ Sorting dependencies..."
 	fvm flutter pub run import_sorter:main
 
+.PHONY: test
+test: ## Executing test
+	@echo "╠ Executing unit test and widget test..."
+	fvm flutter test --coverage test/*
+	@echo "╠ Executing integration test..."
+	fvm flutter test --coverage integration_test/* --flavor development
+
+.PHONY: report_test
+report_test: ## Generate report test
+	@echo "╠ Generating report test..."
+	genhtml coverage/lcov.info -o report 
+	open report/index.html
+	
 .PHONY: keystore
 keystore: keytool -genkey -v -keystore key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key	

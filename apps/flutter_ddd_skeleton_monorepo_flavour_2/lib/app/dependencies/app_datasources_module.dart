@@ -14,11 +14,11 @@ abstract class AppDataSourcesModule {
   CounterRemoteDataSource counterRemoteDataSource(
     FlutterDddSkeletonMonorepoFlavouredApi api,
   ) =>
-      CounterRemoteDataSource(api: api);
+      CounterDataRemoteDataSource(api: api);
 
   @lazySingleton
   CounterLocalDataSource counterLocalDataSource(
     FlutterSecureStorage storage,
   ) =>
-      CounterLocalDataSource(storage: storage);
+      CounterDataLocalDataSource(storage: storage);
 }
